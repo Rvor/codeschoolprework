@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cu Ti's Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-inverse">
+    <a class="navbar-brand" href="#">Ty Bui's Blog</a>
+    <ul class="nav navbar-nav pull-right">
+      <li class="nav-item active">
+        <%= link_to "New Article", new_article_path, class: "btn btn-success-outline" %>
+      </li>
+    </ul>
+  </nav>
+  <div class="col-sm-8 col-sm-offset-2">
+    <%= yield %>
+  </div>
+</body>
+</html>
